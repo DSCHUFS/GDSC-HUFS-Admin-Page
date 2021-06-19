@@ -1,6 +1,6 @@
 {
   "hosting": {
-      "site":"gdsc-hufs",
+      "site":"gdsc-hufs-admin",
       "public": "dist",
       "rewrites": [ {
           "source": "**",
