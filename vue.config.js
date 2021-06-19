@@ -2,6 +2,9 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/GDSC-HUFS-Admin-Page/'
+    : '/',
   productionSourceMap: false,
   pwa: {
     name: 'GDSC HUFS Admin',
