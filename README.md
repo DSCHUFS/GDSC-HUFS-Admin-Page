@@ -6,10 +6,6 @@ GDSC 한국외대 챕터 관리자 페이지 <br>
 [바로가기](https://gdsc-hufs-admin.web.app/) <br>
 [템플릿 소스코드(Aura Admin)](https://github.com/gdg-x/aura-admin) <br>
 
-### Show some :heart: and :star: the repo to support the project
-
-### If you are using Aura, Kindly [fill this form](https://forms.gle/SNpajdAnqbSac2AV9) for Aura Web App Directory
-
 ## Overview
 
 본 웹페이지는 GDG Jalandhar 커뮤니티에서 제작한 Aura Admin 웹 템플릿을 사용하여 제작/배포 하였습니다.
