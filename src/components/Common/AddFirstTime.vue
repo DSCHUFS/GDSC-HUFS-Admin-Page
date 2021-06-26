@@ -114,7 +114,7 @@ export default {
         v => !!v || "Name is required",
         v => (v && v.length <= 50) || "Name must be less than 50 characters"
       ],
-      teamRole: ["Organizing Team", "Core Team", "Volunteer"],
+      teamRole: ["Organizing Team", "Core Team", "Member", "Volunteer"],
       loading: false,
       active: Boolean,
       visible: Boolean,

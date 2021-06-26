@@ -269,6 +269,18 @@
                             </span>
                           </v-col>
                           <v-col cols="12" class="ma-0 py-1">
+                            <span class="font-weight-bold google-font">Member:</span>
+                            <span v-for="doc in mem" :key="doc.id">
+                              <v-chip
+                                outlined
+                                :href="'/team/'+doc.id"
+                                target="_blank"
+                                small
+                                class="mx-1"
+                              >{{doc.name}}</v-chip>
+                            </span>
+                          </v-col>
+                          <v-col cols="12" class="ma-0 py-1">
                             <span class="font-weight-bold google-font">Volunteers:</span>
                             <span v-for="doc in vol" :key="doc.id">
                               <v-chip
@@ -380,6 +392,7 @@ export default {
     // teamInfo: [],
     coreTeam: [],
     orgTeam: [],
+    mem: [],
     vol: [],
     tempData: [],
     speakersInfo: [],
@@ -415,6 +428,7 @@ export default {
       this.vol=[];
       this.orgTeam=[];
       this.coreTeam=[];
+      this.mem=[];
       this.partnersInfo=[];
       this.getEventData();
       this.getSpeakersData();
@@ -470,6 +484,7 @@ export default {
           if (this.eventInfo.team.indexOf(doc.id) !== -1) {
             if (doc.role == "Core Team") this.coreTeam.push(doc);
             else if (doc.role == "Organizing Team") this.orgTeam.push(doc);
+            else if (doc.role == "Member") this.mem.push(doc);
             else this.vol.push(doc);
           }
         });
