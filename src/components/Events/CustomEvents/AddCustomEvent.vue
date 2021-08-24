@@ -430,7 +430,11 @@ export default {
     UploadImage: () => import("@/components/Common/ImageUpload")
   },
   props: [],
-  computed: { ...mapState(["userDetails"]) },
+  computed: {
+  	eventDes() {
+    	return this.eventData.des.replace("\n", "<br />")
+	  },
+    ...mapState(["userDetails"]) },
   data() {
     return {
       menu: false,
