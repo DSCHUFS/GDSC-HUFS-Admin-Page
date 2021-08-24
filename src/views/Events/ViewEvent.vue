@@ -408,7 +408,10 @@ export default {
     ]
   }),
   computed:{
-    ...mapState(['role'])
+      eventDes() {
+        return this.eventInfo.des.split("\n").join("<br>");
+      },
+      ...mapState(['role'])
   },
   mounted() {
     this.getEventData();
