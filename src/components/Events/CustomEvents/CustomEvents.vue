@@ -61,6 +61,8 @@
 
         <!-- {{MeetupData}}   -->
         <v-data-table
+          :sort-by.sync="sortBy"
+          :sort-desc.sync="sortDesc"
           :search="search"
           mobile-breakpoint="no"
           :headers="headers"
@@ -102,6 +104,8 @@ export default {
   },
   name: "MeetupEvents",
   data: () => ({
+    sortBy: 'date',
+    sortDesc: true,
     search: "",
     isSearch: false,
     isLoading: true,
