@@ -68,7 +68,7 @@ export default {
     isLoading: false
   }),
   computed: {
-    ...mapState(["generalConfig", "keysandsecurity","role"])
+    ...mapState(["generalConfig", "curriculumConfig", "keysandsecurity","role"])
   },
   created() {
     // Listen for swUpdated event and display refresh snackbar as required.
@@ -91,7 +91,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(["setGeneral", "setKeysAndSecutity","roleSet", "userDetailsSet"]),
+    ...mapMutations(["setGeneral", "setCurriculumConfig", "setKeysAndSecutity","roleSet", "userDetailsSet"]),
     showRefreshUI(e) {
       this.registration = e.detail;
       this.snackBtnText = "Refresh";
@@ -142,6 +142,8 @@ export default {
               this.setGeneral(doc.data());
             } else if (doc.id == "keysandsecurity") {
               this.setKeysAndSecutity(doc.data());
+            } else if (doc.id == "curriculum"){
+              this.setCurri(doc.data());
             }
           });
           this.isLoading = false;

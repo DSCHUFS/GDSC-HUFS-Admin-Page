@@ -13,6 +13,7 @@
       <v-tab key="item2">Community Guidelines</v-tab>
       <v-tab key="item3">Footer Config</v-tab>
       <v-tab key="item5">Keys & Securities</v-tab>
+      <v-tab key="item6">Curriculum</v-tab>
     </v-tabs>
 
     <v-tabs-items v-model="tab" style="border:1px solid #e0e0e0;border-radius:5px;">
@@ -40,6 +41,13 @@
           </v-card-text>
         </v-card>
       </v-tab-item>
+      <v-tab-item key="item6">
+        <v-card flat>
+          <v-card-text>
+              <Curriculum @show="showSnakeBar"/>
+          </v-card-text>
+      </v-card>
+    </v-tab-item>
     </v-tabs-items>
   </v-container>
 </template>
@@ -53,7 +61,8 @@ export default {
     CommunityGuidelines:()=>import('@/components/Config/CommunityGuidelines/CommunityGuidelines'),
     Snakebar:()=>import('@/components/Common/Snakebar'),
     Footer:()=>import('@/components/Config/Footer/Footer'),
-    KeysAndSecurity:()=>import('@/components/Config/Keys/Keys')
+    KeysAndSecurity:()=>import('@/components/Config/Keys/Keys'),
+    Curriculum:()=>import('@/components/Config/Curriculum/Curriculum')
   },
   computed:{...mapState(['role'])},
   beforeMount(){
